@@ -70,20 +70,20 @@ function interact()
 {
 	$(".output").mousedown(function(event) {
 		var curGate = $(this).closest(".gate");
-		var connector=$("#connector_canvas");
+		var connector=$('#connector_canvas');
 		var curCon;
 
 		if(!$(curGate).data("line",))
 		{
-			curCon = $(document.createElementNS("http://www.w3.org/2000/svg','line"));
+			curCon = $(document.createElementNS("http://www.w3.org/2000/svg","line"));
 			curGate.data("line", curCon);
 		}
 		else curCon = curGate.data("line");
 		connector.append(curCon);
 		var start= curGate.position();
-		var outputPosition= $(this).position();
-		var x1=start.left+outputPosition.left+($(this).width()/2);
-		var y1=start.top+outputPosition.top+($(this).height()/2);
+		var output_position= $(this).position();
+		var x1=start.left+output_position.left+($(this).width()/2);
+		var y1=start.top+output_position.top+($(this).height()/2);
 
 		curCon.attr("x1",x1).attr("y1", y1).attr("x2",x1+1).attr("y2",y1);
 	});
@@ -94,8 +94,10 @@ function interact()
 		drag: function(event,ui){
 			var _end=$(event.target).parent().position();
 			var end= $(event.target).position();
-			if(_end&&end)
+			if(_end&&end){
 				$(event.target).parent().data("line").attr("x2",end.left+_end.left+5).attr("y2",end.top+_end.top+2);
+			}
+		
 		},
 
 		stop: function(event,ui){
@@ -110,12 +112,12 @@ function interact()
 
 
 	$(".gate").droppable({
-		accept: ".output",
+		accept: '.output',
 		drop: function(event,ui){
 			var gate=ui.draggable.closest(".gate"); //the gate whose output is being dragged
 			var gate_id=gate.attr("id");
-			var gate_child=gate.children();
-			var now_child=$(this).children();
+			var gateChild=gate.children();
+			var nowChild=$(this).children();
 			
 			ui.draggable.css({top:"45%",right:"-2px",left:"auto"});
 			gate.data("output_line",gate.data("line"));
@@ -129,7 +131,7 @@ function interact()
 		    	if($(this).data("inp"))
 		    		$(this).data("inp").remove();
 		    	$(this).data("inp",gate.data("line"));
-		    	css_selector='#'+gate_id+" .input";
+		    	var css_selector='#'+gate_id+" .input";
 		    	x2=$(this).position().left + $(css_selector).position().left+3;
 		    	y2=$(this).position().top + $(css_selector).position().top+3;
 		    	gate.data("line").attr("x2", x2).attr("y2", y2);
@@ -140,69 +142,69 @@ function interact()
 		    gate.data("line", null);
 		   // console.log("dropped");
 		    //console.log(gate);
-		    //console.log(now_child);
+		    //console.log(nowChild);
 
 		    
 
-		   if($(gate_child[0]).hasClass("inverter")){
+		   if($(gateChild[0]).hasClass("inverter")){
 		   console.log("dropped from inverter");
 		   //document.getElementById("comments").innerHTML ="dropped from inverter";
 		  }
-		  if($(now_child[0]).hasClass("inverter")){
+		  if($(nowChild[0]).hasClass("inverter")){
 		   console.log("dropped to inverter");
 		   //document.getElementById("comments").innerHTML ="dropped to inverter";
 		  }
 
-		   if($(gate_child[0]).hasClass("capacitor")){
+		   if($(gateChild[0]).hasClass("capacitor")){
 		   console.log("dropped from capacitorr");
 		  }
-		  if($(now_child[0]).hasClass("capacitor")){
+		  if($(nowChild[0]).hasClass("capacitor")){
 		   console.log("dropped to capacitor");
 		  }
 
-		  if($(gate_child[0]).hasClass("ground")){
+		  if($(gateChild[0]).hasClass("ground")){
 		   console.log("dropped from ground");
 		  }
-		  if($(now_child[0]).hasClass("ground")){
+		  if($(nowChild[0]).hasClass("ground")){
 		   console.log("dropped to ground");
 		  }
 
-		   if($(gate_child[0]).hasClass("inputsym")){
+		   if($(gateChild[0]).hasClass("inputsym")){
 		   console.log("dropped from input");
 		  }
-		  if($(now_child[0]).hasClass("inputsym")){
+		  if($(nowChild[0]).hasClass("inputsym")){
 		   console.log("dropped to input");
 		  }
 
-		  if($(gate_child[0]).hasClass("outputsym")){
+		  if($(gateChild[0]).hasClass("outputsym")){
 		   console.log("dropped from output");
 		  }
-		  if($(now_child[0]).hasClass("outputsym")){
+		  if($(nowChild[0]).hasClass("outputsym")){
 		   console.log("dropped to output");
 		  }
 
 
-		  if(($(gate_child[0]).hasClass("inverter"))&&($(now_child[0]).hasClass("inverter"))){
+		  if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("inverter"))){
 		  	inv_inv=inv_inv+1;
 		  	 console.log("inv inv is",inv_inv);
 		  }
 
-		  if(($(gate_child[0]).hasClass("inputsym"))&&($(now_child[0]).hasClass("inverter"))){
+		  if(($(gateChild[0]).hasClass("inputsym"))&&($(nowChild[0]).hasClass("inverter"))){
 		  	inp_inv=inp_inv+1;
 		  	 console.log("inp inv is",inp_inv);
 		  }
 
-		  if(($(gate_child[0]).hasClass("inverter"))&&($(now_child[0]).hasClass("outputsym"))){
+		  if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("outputsym"))){
 		  	inv_outp=inv_outp+1;
 		  	 console.log("inv outp is",inv_outp);
 		  }
 
-		  if(($(gate_child[0]).hasClass("inverter"))&&($(now_child[0]).hasClass("capacitor"))){
+		  if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("capacitor"))){
 		  	inv_cap=inv_cap+1;
 		  	 console.log("inv cap is",inv_cap);
 		  }
 
-		  if(($(gate_child[0]).hasClass("capacitor"))&&($(now_child[0]).hasClass("ground"))){
+		  if(($(gateChild[0]).hasClass("capacitor"))&&($(nowChild[0]).hasClass("ground"))){
 		  	cap_grd=cap_grd+1;
 		  	 console.log("cap grd is",cap_grd);
 		  }
@@ -280,8 +282,8 @@ function renderDiagram(diagram){
 			drag: function(event,ui){
 				var lines= $(this).data("output_line");
 				var inp= $(this).data("inp");
-				if(lines){$(lines).attr('x1', $(this).position().left + $(this).width()).attr('y1', $(this).position().top + ($(this).height())/2);}
-				if(inp){$(inp).attr('x2', $(this).position().left + 2).attr('y2', $(this).position().top+ $('.input').position().top+5);}
+				if(lines){$(lines).attr("x1", $(this).position().left + $(this).width()).attr("y1", $(this).position().top + ($(this).height())/2);}
+				if(inp){$(inp).attr("x2", $(this).position().left + 2).attr("y2", $(this).position().top+ $('.input').position().top+5);}
 			},
 			stop: function(event,ui){
 				var id=ui.helper.attr("id");
