@@ -69,23 +69,23 @@ var canvas=$("#drop_zone").droppable({
 function interact()
 {
 	$(".output").mousedown(function(event) {
-		var curGate = $(this).closest('.gate');
-		var connector=$('#connector_canvas');
-		var cur_con;
+		var curGate = $(this).closest(".gate");
+		var connector=$("#connector_canvas");
+		var curCon;
 
-		if(!$(curGate).data('line',))
+		if(!$(curGate).data("line",))
 		{
-			cur_con = $(document.createElementNS('http://www.w3.org/2000/svg','line'));
-			curGate.data('line', cur_con);
+			curCon = $(document.createElementNS("http://www.w3.org/2000/svg','line"));
+			curGate.data("line", curCon);
 		}
-		else cur_con = curGate.data('line');
-		connector.append(cur_con);
+		else curCon = curGate.data("line");
+		connector.append(curCon);
 		var start= curGate.position();
-		var output_position= $(this).position();
-		var x1=start.left+output_position.left+($(this).width()/2);
-		var y1=start.top+output_position.top+($(this).height()/2);
+		var outputPosition= $(this).position();
+		var x1=start.left+outputPosition.left+($(this).width()/2);
+		var y1=start.top+outputPosition.top+($(this).height()/2);
 
-		cur_con.attr('x1',x1).attr('y1', y1).attr('x2',x1+1).attr('y2',y1);
+		curCon.attr("x1",x1).attr("y1", y1).attr("x2",x1+1).attr("y2",y1);
 	});
 
 
@@ -95,49 +95,49 @@ function interact()
 			var _end=$(event.target).parent().position();
 			var end= $(event.target).position();
 			if(_end&&end)
-				$(event.target).parent().data('line').attr('x2',end.left+_end.left+5).attr('y2',end.top+_end.top+2);
+				$(event.target).parent().data("line").attr("x2",end.left+_end.left+5).attr("y2",end.top+_end.top+2);
 		},
 
 		stop: function(event,ui){
-			if(!ui.helper.closest('.gate').data('line'))
+			if(!ui.helper.closest(".gate").data("line"))
 				return;
 			ui.helper.css({top:"45%",right:"-2px",left:"auto"});
-			ui.helper.closest('.gate').data('line').remove();
-			ui.helper.closest('.gate').data('line',null);
+			ui.helper.closest(".gate").data("line").remove();
+			ui.helper.closest(".gate").data("line",null);
 			console.log("stopped");
 		}
 	});
 
 
 	$(".gate").droppable({
-		accept: '.output',
+		accept: ".output",
 		drop: function(event,ui){
-			var gate=ui.draggable.closest('.gate'); //the gate whose output is being dragged
-			var gate_id=gate.attr('id');
+			var gate=ui.draggable.closest(".gate"); //the gate whose output is being dragged
+			var gate_id=gate.attr("id");
 			var gate_child=gate.children();
 			var now_child=$(this).children();
 			
 			ui.draggable.css({top:"45%",right:"-2px",left:"auto"});
-			gate.data('output_line',gate.data('line'));
+			gate.data("output_line",gate.data("line"));
 
-			var x_abs=parseInt(gate.data('line').attr('x2'));
-		    var y_abs=parseInt(gate.data('line').attr('y2'));
-		    var this_x=parseInt($(this).css('left'));
-		    var this_y=parseInt($(this).css('top'));
+			var x_abs=parseInt(gate.data("line").attr("x2"));
+		    var y_abs=parseInt(gate.data("line").attr("y2"));
+		    var this_x=parseInt($(this).css("left"));
+		    var this_y=parseInt($(this).css("top"));
 		    if((x_abs - this_x)< $(this).width())
 		    {
-		    	if($(this).data('inp'))
-		    		$(this).data('inp').remove();
-		    	$(this).data('inp',gate.data('line'));
+		    	if($(this).data("inp"))
+		    		$(this).data("inp").remove();
+		    	$(this).data("inp",gate.data("line"));
 		    	css_selector='#'+gate_id+" .input";
 		    	x2=$(this).position().left + $(css_selector).position().left+3;
 		    	y2=$(this).position().top + $(css_selector).position().top+3;
-		    	gate.data('line').attr('x2', x2).attr('y2', y2);
+		    	gate.data("line").attr("x2", x2).attr("y2", y2);
 		    	
 		    	
 		    }
-		    else gate.data('line').remove();
-		    gate.data('line', null);
+		    else gate.data("line").remove();
+		    gate.data("line", null);
 		   // console.log("dropped");
 		    //console.log(gate);
 		    //console.log(now_child);
@@ -278,8 +278,8 @@ function renderDiagram(diagram){
 		}).draggable({
 			containment:"parent",
 			drag: function(event,ui){
-				var lines= $(this).data('output_line');
-				var inp= $(this).data('inp');
+				var lines= $(this).data("output_line");
+				var inp= $(this).data("inp");
 				if(lines){$(lines).attr('x1', $(this).position().left + $(this).width()).attr('y1', $(this).position().top + ($(this).height())/2);}
 				if(inp){$(inp).attr('x2', $(this).position().left + 2).attr('y2', $(this).position().top+ $('.input').position().top+5);}
 			},
