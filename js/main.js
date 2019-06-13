@@ -1,7 +1,7 @@
-$(init);
+
 function init(){
-var input1_id=0;
-var input2_id=0;
+//var input1_id=0;
+//var input2_id=0;
 var id=0;
 var inp_inv=0;
 var inv_inv=0;
@@ -11,8 +11,8 @@ var cap_grd=0;
 
 function input()
 {
-	var input_div='<div class="input"></div>';
-	var input=$(input_div).css({
+	var inputDiv="<div class='input'></div>";
+	var input=$(inputDiv).css({
 		position:"absolute",
 		width:"8px",
 		height: "8px",
@@ -27,8 +27,8 @@ function input()
 
 function output()
 {
-	var output_div='<div class="output"></div>';
-	var output=$(output_div).css({
+	var outputDiv="<div class='output'></div>";
+	var output=$(outputDiv).css({
 		position:"absolute",
 		width:"8px",
 		height: "8px",
@@ -49,7 +49,7 @@ var canvas=$("#drop_zone").droppable({
 	drop: function(event, ui){
 		var node={_id: id,position: ui.helper.position()};
 
-		node.position.left-=$('#tools').width();
+		node.position.left-=$("#tools").width();
 		id=id+1;
 		if(ui.helper.hasClass("drag")){
 			node.type=ui.helper.prevObject.attr("id");
@@ -69,21 +69,21 @@ var canvas=$("#drop_zone").droppable({
 function interact()
 {
 	$(".output").mousedown(function(event) {
-		var cur_gate = $(this).closest('.gate');
+		var curGate = $(this).closest('.gate');
 		var connector=$('#connector_canvas');
 		var cur_con;
 
-		if(!$(cur_gate).data('line',))
+		if(!$(curGate).data('line',))
 		{
 			cur_con = $(document.createElementNS('http://www.w3.org/2000/svg','line'));
-			cur_gate.data('line', cur_con);
+			curGate.data('line', cur_con);
 		}
-		else cur_con = cur_gate.data('line');
+		else cur_con = curGate.data('line');
 		connector.append(cur_con);
-		var start= cur_gate.position();
+		var start= curGate.position();
 		var output_position= $(this).position();
 		var x1=start.left+output_position.left+($(this).width()/2);
-		y1=start.top+output_position.top+($(this).height()/2);
+		var y1=start.top+output_position.top+($(this).height()/2);
 
 		cur_con.attr('x1',x1).attr('y1', y1).attr('x2',x1+1).attr('y2',y1);
 	});
@@ -401,16 +401,16 @@ function renderDiagram(diagram){
 
     $( ".simulate" ).click(function() {
 
-        if(gcount==0){
+        if(gcount===0){
           alert("Hint : ground is misssing");
         }
-        if(icount==0){
+        if(icount===0){
           alert("Hint : input is misssing");
         }
-        if(ocount==0){
+        if(ocount===0){
           alert("Hint : output is misssing");
         }
-        if(ccount==0){
+        if(ccount===0){
           alert("Hint : capacitor is misssing");
         }
         if(invcount<5){
@@ -434,3 +434,5 @@ function renderDiagram(diagram){
 
 
 }
+
+$(init);
