@@ -122,18 +122,18 @@ function interact()
 			ui.draggable.css({top:"45%",right:"-2px",left:"auto"});
 			gate.data("output_line",gate.data("line"));
 
-			var x_abs=parseInt(gate.data("line").attr("x2"));
-		    var y_abs=parseInt(gate.data("line").attr("y2"));
-		    var this_x=parseInt($(this).css("left"));
-		    var this_y=parseInt($(this).css("top"));
-		    if((x_abs - this_x)< $(this).width())
+			var xAbs=parseInt((gate.data("line").attr("x2")),10);
+		    var yAbs=parseInt((gate.data("line").attr("y2")),10);
+		    var thisX=parseInt(($(this).css("left")),10);
+		    var thisY=parseInt(($(this).css("top")),10);
+		    if((xAbs - thisX)< $(this).width())
 		    {
 		    	if($(this).data("inp"))
 		    		$(this).data("inp").remove();
 		    	$(this).data("inp",gate.data("line"));
-		    	var css_selector='#'+gate_id+" .input";
-		    	x2=$(this).position().left + $(css_selector).position().left+3;
-		    	y2=$(this).position().top + $(css_selector).position().top+3;
+		    	var css_selector="#"+gate_id+" .input";
+		    	var x2=$(this).position().left + $(css_selector).position().left+3;
+		    	var y2=$(this).position().top + $(css_selector).position().top+3;
 		    	gate.data("line").attr("x2", x2).attr("y2", y2);
 		    	
 		    	
