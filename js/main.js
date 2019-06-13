@@ -417,9 +417,9 @@ function renderDiagram(diagram){
           alert("Hint : Check no. of inverters");
         }
 
-        if((gcount==1)&& (icount==1) && (ocount==1) && (ccount==1) && (invcount==5)){
+        if((gcount===1)&& (icount===1) && (ocount===1) && (ccount===1) && (invcount===5)){
         	alert("number of components is complete now")
-        	if((inp_inv==1) && (inv_inv==4) && (inv_outp==1) && (inv_cap==1) && (cap_grd==1)){
+        	if((inp_inv===1) && (inv_inv===4) && (inv_outp===1) && (inv_cap===1) && (cap_grd===1)){
         		alert("circuit complete");
         		//window.open("mygraph.html");
         		$("#mygraph").attr('src',"mygraph1.png");
