@@ -100,115 +100,101 @@ function interact()
 	$(".gate").droppable({
 		accept: ".output",
 		drop: function(event,ui){
-			var gate=ui.draggable.closest(".gate"); //the gate whose output is being dragged
-			var gateId=gate.attr("id");
-			var gateChild=gate.children();
-			var nowChild=$(this).children();
+		var gate=ui.draggable.closest(".gate"); //the gate whose output is being dragged
+		var gateId=gate.attr("id");
+		var gateChild=gate.children();
+		var nowChild=$(this).children();
 			
-			ui.draggable.css({top:"45%",right:"-2px",left:"auto"});
-			gate.data("output_line",gate.data("line"));
+		ui.draggable.css({top:"45%",right:"-2px",left:"auto"});
+		gate.data("output_line",gate.data("line"));
 
-			var xAbs=parseInt((gate.data("line").attr("x2")),10);
-		    var yAbs=parseInt((gate.data("line").attr("y2")),10);
-		    var thisX=parseInt(($(this).css("left")),10);
-		    var thisY=parseInt(($(this).css("top")),10);
-		    if((xAbs - thisX)< $(this).width())
-		    {
-		    	if($(this).data("inp")){
-		    		$(this).data("inp").remove();
-		    	}
-		    	$(this).data("inp",gate.data("line"));
-		    	var css_selector="#"+gateId+" .input";
-		    	var x2=$(this).position().left + $(css_selector).position().left+3;
-		    	var y2=$(this).position().top + $(css_selector).position().top+3;
-		    	gate.data("line").attr("x2", x2).attr("y2", y2);
-		    	
-		    	
-		    }
-		    else {
-		    	gate.data("line").remove();
-		    }
-		    gate.data("line", null);
-		   // console.log("dropped");
-		    //console.log(gate);
-		    //console.log(nowChild);
+		var xAbs=parseInt((gate.data("line").attr("x2")),10);
+		var yAbs=parseInt((gate.data("line").attr("y2")),10);
+		var thisX=parseInt(($(this).css("left")),10);
+		var thisY=parseInt(($(this).css("top")),10);
+		if((xAbs - thisX)< $(this).width())
+		{
+			if($(this).data("inp")){
+				$(this).data("inp").remove();
+			}
+		    $(this).data("inp",gate.data("line"));
+		    var css_selector="#"+gateId+" .input";
+		    var x2=$(this).position().left + $(css_selector).position().left+3;
+		    var y2=$(this).position().top + $(css_selector).position().top+3;
+		    gate.data("line").attr("x2", x2).attr("y2", y2);
+		}
+		else {
+			gate.data("line").remove();
+		}
+		gate.data("line", null);
+		// console.log("dropped");
+		//console.log(gate);
+		//console.log(nowChild);
 
-		    
+		if($(gateChild[0]).hasClass("inverter")){
+			console.log("dropped from inverter");
+			//document.getElementById("comments").innerHTML ="dropped from inverter";
+		}
+		if($(nowChild[0]).hasClass("inverter")){
+			console.log("dropped to inverter");
+			//document.getElementById("comments").innerHTML ="dropped to inverter";
+		}
 
-		   if($(gateChild[0]).hasClass("inverter")){
-		   console.log("dropped from inverter");
-		   //document.getElementById("comments").innerHTML ="dropped from inverter";
-		  }
-		  if($(nowChild[0]).hasClass("inverter")){
-		   console.log("dropped to inverter");
-		   //document.getElementById("comments").innerHTML ="dropped to inverter";
-		  }
+		if($(gateChild[0]).hasClass("capacitor")){
+			console.log("dropped from capacitorr");
+		}
+		if($(nowChild[0]).hasClass("capacitor")){
+			console.log("dropped to capacitor");
+		}
 
-		   if($(gateChild[0]).hasClass("capacitor")){
-		   console.log("dropped from capacitorr");
-		  }
-		  if($(nowChild[0]).hasClass("capacitor")){
-		   console.log("dropped to capacitor");
-		  }
-
-		  if($(gateChild[0]).hasClass("ground")){
+		if($(gateChild[0]).hasClass("ground")){
 		   console.log("dropped from ground");
-		  }
-		  if($(nowChild[0]).hasClass("ground")){
-		   console.log("dropped to ground");
-		  }
+		}
 
-		   if($(gateChild[0]).hasClass("inputsym")){
+		if($(nowChild[0]).hasClass("ground")){
+			console.log("dropped to ground");
+		}
+
+		if($(gateChild[0]).hasClass("inputsym")){
 		   console.log("dropped from input");
-		  }
-		  if($(nowChild[0]).hasClass("inputsym")){
+		}
+
+		if($(nowChild[0]).hasClass("inputsym")){
 		   console.log("dropped to input");
-		  }
+		}
 
-		  if($(gateChild[0]).hasClass("outputsym")){
+		if($(gateChild[0]).hasClass("outputsym")){
 		   console.log("dropped from output");
-		  }
-		  if($(nowChild[0]).hasClass("outputsym")){
+		}
+		if($(nowChild[0]).hasClass("outputsym")){
 		   console.log("dropped to output");
-		  }
+		}
 
 
-		  if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("inverter"))){
-		  	invinvC=invinvC+1;
-		  	 console.log("inv inv is",invinvC);
-		  }
+		if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("inverter"))){
+			invinvC=invinvC+1;
+		  	console.log("inv inv is",invinvC);
+		}
 
-		  if(($(gateChild[0]).hasClass("inputsym"))&&($(nowChild[0]).hasClass("inverter"))){
-		  	inpinvC=inpinvC+1;
-		  	 console.log("inp inv is",inpinvC);
-		  }
+		if(($(gateChild[0]).hasClass("inputsym"))&&($(nowChild[0]).hasClass("inverter"))){
+			inpinvC=inpinvC+1;
+		  	console.log("inp inv is",inpinvC);
+		}
 
-		  if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("outputsym"))){
-		  	invoutpC=invoutpC+1;
-		  	 console.log("inv outp is",invoutpC);
-		  }
+		if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("outputsym"))){
+			invoutpC=invoutpC+1;
+		  	console.log("inv outp is",invoutpC);
+		}
 
-		  if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("capacitor"))){
-		  	invcapC=invcapC+1;
-		  	 console.log("inv cap is",invcapC);
-		  }
+		if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("capacitor"))){
+			invcapC=invcapC+1;
+		  	console.log("inv cap is",invcapC);
+		}
 
-		  if(($(gateChild[0]).hasClass("capacitor"))&&($(nowChild[0]).hasClass("ground"))){
-		  	capgrdC=capgrdC+1;
-		  	 console.log("cap grd is",capgrdC);
-		  }
-
-
-		 
-
-
-
-
-
-
-
-
-
+		if(($(gateChild[0]).hasClass("capacitor"))&&($(nowChild[0]).hasClass("ground"))){
+			capgrdC=capgrdC+1;
+		  	console.log("cap grd is",capgrdC);
+		}
 
 		}
 	});
