@@ -174,26 +174,32 @@ function interact()
 		if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("inverter"))){
 			invinvC=invinvC+1;
 		  	console.log("inv inv is",invinvC);
+		  	document.getElementById("inv-inv").innerHTML = invinvC ;
+
 		}
 
 		if(($(gateChild[0]).hasClass("inputsym"))&&($(nowChild[0]).hasClass("inverter"))){
 			inpinvC=inpinvC+1;
 		  	console.log("inp inv is",inpinvC);
+		  	document.getElementById("inp-inv").innerHTML = inpinvC ;
 		}
 
 		if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("outputsym"))){
 			invoutpC=invoutpC+1;
 		  	console.log("inv outp is",invoutpC);
+		  	document.getElementById("inv-out").innerHTML = invoutpC ;
 		}
 
 		if(($(gateChild[0]).hasClass("inverter"))&&($(nowChild[0]).hasClass("capacitor"))){
 			invcapC=invcapC+1;
 		  	console.log("inv cap is",invcapC);
+		  	document.getElementById("inv-cap").innerHTML = invcapC ;
 		}
 
 		if(($(gateChild[0]).hasClass("capacitor"))&&($(nowChild[0]).hasClass("ground"))){
 			capgrdC=capgrdC+1;
 		  	console.log("cap grd is",capgrdC);
+		  	document.getElementById("cap-grd").innerHTML = capgrdC ;
 		}
 
 		}
@@ -274,7 +280,9 @@ function renderDiagram(diagram){
 
 canvas.droppable({
 	drop: function(event, ui){
-		var node={_id: id,position: ui.helper.position()};
+		var node={_id: id,
+			position: ui.helper.position()
+		};
 
 		node.position.left-=$("#tools").width();
 		id=id+1;
@@ -321,6 +329,12 @@ canvas.droppable({
 		 invoutpC=0;
 		 invcapC=0;
 		 capgrdC=0;
+		 document.getElementById("inv-inv").innerHTML = invinvC ;
+		 document.getElementById("inp-inv").innerHTML = inpinvC ;
+		 document.getElementById("inv-out").innerHTML = invoutpC ;
+		 document.getElementById("inv-cap").innerHTML = invcapC ;
+		 document.getElementById("cap-grd").innerHTML = capgrdC ;
+		 $("#mygraph").attr('src',"images/graph1.png");
     });
 
 
