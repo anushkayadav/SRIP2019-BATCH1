@@ -23,6 +23,16 @@
 
   			
   		}
+
+  		#final2 {
+			font-family: arial, sans-serif;
+  			
+  			width: 75%;
+  			border:1px solid rgb(180, 180, 180);
+  			text-align: center;
+  		}
+
+  			
   		td, th {
   			
   			
@@ -93,6 +103,53 @@
 			&nbsp;
 			&nbsp;
 			<button type="button" class="btn btn-outline-warning  " id="reset" style="border-radius: 5px">Reset</button>
+			&nbsp;
+			&nbsp;
+			&nbsp;
+
+			<!-- Large modal -->
+			<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target=".bd-example-modal-lg" style="border-radius: 5px">Help</button>
+
+			<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  				<div class="modal-dialog modal-lg">
+    				<div class="modal-content">
+    					<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Instructions</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body" style="text-align: left;">
+
+    					1.Select the Langauge from Language dropdown.<button type="button" class="btn btn-outline-info m-2">Choose Langauge</button><br><br>
+
+                              2.Click on the <button type="button" class="btn btn-outline-success m-2">Play</button> to play the complete audio .<br><br>
+
+                              3. Drag sections in waveform box to create "Regions".<br>
+                              <img src="two.png"><br>
+                              &nbsp;&nbsp;&nbsp;a. Click in the created region to play that particular part.<br>
+                              &nbsp;&nbsp;&nbsp;b. shift + click in case (a) does not work.<br><br>
+
+                              4.Click on each phoneme in <strong>Sym</strong> coloumn of the  table and observe its respective region in the waveform box.<br>
+                              &nbsp;&nbsp;&nbsp;if the color of the region appears to be too light, click on the phenome again to change its color.<br><br>
+
+
+                              5. Drag the slider to the right to <strong>ZOOM IN</strong>  and observe the region properly.<br><br>
+
+                              6. Select the respective <strong>Extn type</strong> , <strong>Manner</strong> and <strong>Place</strong> of each phoneme.
+                              <br><br>
+
+                              7. The select box will turn into<strong> <span style="color:green"> Green </span></strong>if right selection is made and <strong><span style="color:red"> Red </span></strong>if wrong selection is made.<br>
+                              <img src="one.png">
+                          </div>
+
+      
+    				</div>
+  				</div>
+			</div>
+
+			
+
 		</div><br><br>
 		
 
@@ -137,8 +194,9 @@
 
 
 	<table align="center" id="final1"  class="table  table-bordered"></table>
-	<table id="final2"></table>
-	<table id="final3"></table>
+	<table align="center" id="final2"  class="table  table-bordered"></table>
+	<table align="center" id="final3"  class="table  table-bordered"></table>
+	
 
 	
 
@@ -168,6 +226,7 @@
     <script type="text/javascript" src="../libraries/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="../libraries/bootstrap/js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+
     <script>
     	$(document).ready(function(){
     		$('[data-toggle="tooltip"]').tooltip();
