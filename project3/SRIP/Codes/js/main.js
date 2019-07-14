@@ -942,16 +942,6 @@ slider.oninput = function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
 		if(sel==="Telugu"){
 			document.getElementById("utterance").innerHTML = " ఈరోజు వార్తల్లోని ముఖ్యామ్శాలు" ;
 			document.getElementById("translit").innerHTML ="iirooju vaartallooni mukhyaamshaalu " ;
@@ -986,8 +976,9 @@ slider.oninput = function () {
   			r1c1.innerHTML = '<button type="button" class="btn btn-outline-dark btn-sm m-1" id="ii" ">ii</button>';
   			r1c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
   			
-  			r1c3.innerHTML='<select class="mannersev"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r1c4.innerHTML='<select class="placel"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r1c3.innerHTML='<select class="mannerlv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			
+  			r1c4.innerHTML='<select class="placefh"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r2 = table.insertRow(2);
   			var r2c1 = r2.insertCell(0);
@@ -996,18 +987,18 @@ slider.oninput = function () {
   			var r2c4 = r2.insertCell(3);
   			r2c1.innerHTML = '<button type="button" class="btn btn-outline-dark btn-sm m-1" id="r1" ">r</button>';
   			r2c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r2c3.innerHTML='<select class="mannersv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r2c4.innerHTML='<select class="placefh"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r2c3.innerHTML='<select class="mannersev"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r2c4.innerHTML='<select class="placea"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r3 = table.insertRow(3);
   			var r3c1 = r3.insertCell(0);
   			var r3c2 = r3.insertCell(1);
   			var r3c3 = r3.insertCell(2);
   			var r3c4 = r3.insertCell(3);
-  			r3c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="oo1 ">oo</button>'
-  			r3c2.innerHTML = '<select class="extnvun"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r3c3.innerHTML='<select class="manners"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r3c4.innerHTML='<select class="placed"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r3c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="oo1">oo</button>'
+  			r3c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
+  			r3c3.innerHTML='<select class="mannerlv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r3c4.innerHTML='<select class="placebm"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r4 = table.insertRow(4);
   			var r4c1 = r4.insertCell(0);
@@ -1015,9 +1006,9 @@ slider.oninput = function () {
   			var r4c3 = r4.insertCell(2);
   			var r4c4 = r4.insertCell(3);
   			r4c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="j" ">j</button>'
-  			r4c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r4c3.innerHTML='<select class="mannerlv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r4c4.innerHTML='<select class="placefm"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r4c2.innerHTML = '<select class="extnvun"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
+  			r4c3.innerHTML='<select class="manners"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r4c4.innerHTML='<select class="placep"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r5 = table.insertRow(5);
   			var r5c1 = r5.insertCell(0);
@@ -1025,9 +1016,9 @@ slider.oninput = function () {
   			var r5c3 = r5.insertCell(2);
   			var r5c4 = r5.insertCell(3);
   			r5c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="u1" ">u</button>'
-  			r5c2.innerHTML = '<select class="extnun"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r5c3.innerHTML='<select class="mannerf"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r5c4.innerHTML='<select class="placea"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r5c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
+  			r5c3.innerHTML='<select class="mannersv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r5c4.innerHTML='<select class="placebh"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r6 = table.insertRow(6 );
   			var r6c1 = r6.insertCell(0);
@@ -1036,7 +1027,7 @@ slider.oninput = function () {
   			var r6c4 = r6.insertCell(3);
   			r6c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="v" ">v</button>'
   			r6c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r6c3.innerHTML='<select class="mannern"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r6c3.innerHTML='<select class="mannersev"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
   			r6c4.innerHTML='<select class="placel"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r7 = table.insertRow(7);
@@ -1046,7 +1037,7 @@ slider.oninput = function () {
   			var r7c4 = r7.insertCell(3);
   			r7c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="aa1" ">aa</button>'
   			r7c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r7c3.innerHTML='<select class="mannersv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r7c3.innerHTML='<select class="mannerlv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
   			r7c4.innerHTML='<select class="placecl"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r8 = table.insertRow(8 );
@@ -1056,8 +1047,8 @@ slider.oninput = function () {
   			var r8c4 = r8.insertCell(3);
   			r8c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="r2" ">r</button>'
   			r8c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r8c3.innerHTML='<select class="mannern"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r8c4.innerHTML='<select class="placed"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r8c3.innerHTML='<select class="mannersev"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r8c4.innerHTML='<select class="placea"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r9 = table.insertRow(9 );
   			var r9c1 = r9.insertCell(0);
@@ -1076,8 +1067,8 @@ slider.oninput = function () {
   			var r10c4 = r10.insertCell(3);
   			r10c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="a" ">a</button>'
   			r10c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r10c3.innerHTML='<select class="mannersev"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r10c4.innerHTML='<select class="placea"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r10c3.innerHTML='<select class="mannersv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r10c4.innerHTML='<select class="placecl"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r11 = table.insertRow(11 );
   			var r11c1 = r11.insertCell(0);
@@ -1086,8 +1077,8 @@ slider.oninput = function () {
   			var r11c4 = r11.insertCell(3);
   			r11c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="l1" ">l</button>'
   			r11c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r11c3.innerHTML='<select class="mannerlv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r11c4.innerHTML='<select class="placecl"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r11c3.innerHTML='<select class="mannersev"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r11c4.innerHTML='<select class="placed"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r12 = table.insertRow(12);
   			var r12c1 = r12.insertCell(0);
@@ -1106,8 +1097,8 @@ slider.oninput = function () {
   			var r13c4 = r13.insertCell(3);
   			r13c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="oo2" ">oo</button>'
   			r13c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r13c3.innerHTML='<select class="mannersv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r13c4.innerHTML='<select class="placecl"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r13c3.innerHTML='<select class="mannerlv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r13c4.innerHTML='<select class="placebm"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r14 = table.insertRow(14 );
   			var r14c1 = r14.insertCell(0);
@@ -1116,8 +1107,8 @@ slider.oninput = function () {
   			var r14c4 = r14.insertCell(3);
   			r14c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="n" ">n</button>'
   			r14c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r14c3.innerHTML='<select class="mannersev"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r14c4.innerHTML='<select class="placep"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r14c3.innerHTML='<select class="mannern"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r14c4.innerHTML='<select class="placed"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r15 = table.insertRow(15 );
   			var r15c1 = r15.insertCell(0);
@@ -1125,9 +1116,9 @@ slider.oninput = function () {
   			var r15c3 = r15.insertCell(2);
   			var r15c4 = r15.insertCell(3);
   			r15c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="i" ">i</button>'
-  			r15c2.innerHTML = '<select class="extnunun"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r15c3.innerHTML='<select class="manners"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r15c4.innerHTML='<select class="placev"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r15c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
+  			r15c3.innerHTML='<select class="mannersv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r15c4.innerHTML='<select class="placefh"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r16 = table.insertRow(16 );
   			var r16c1 = r16.insertCell(0);
@@ -1136,8 +1127,8 @@ slider.oninput = function () {
   			var r16c4 = r16.insertCell(3);
   			r16c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="m1" ">m</button>'
   			r16c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r16c3.innerHTML='<select class="mannersv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r16c4.innerHTML='<select class="placefm"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r16c3.innerHTML='<select class="mannern"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r16c4.innerHTML='<select class="placel"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r17 = table.insertRow(17 );
   			var r17c1 = r17.insertCell(0);
@@ -1145,9 +1136,9 @@ slider.oninput = function () {
   			var r17c3 = r17.insertCell(2);
   			var r17c4 = r17.insertCell(3);
   			r17c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="u2" ">u</button>'
-  			r17c2.innerHTML = '<select class="extnunun"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r17c3.innerHTML='<select class="manners"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r17c4.innerHTML='<select class="placel"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r17c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
+  			r17c3.innerHTML='<select class="mannersv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r17c4.innerHTML='<select class="placebh"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r18 = table.insertRow(18 );
   			var r18c1 = r18.insertCell(0);
@@ -1155,9 +1146,9 @@ slider.oninput = function () {
   			var r18c3 = r18.insertCell(2);
   			var r18c4 = r18.insertCell(3);
   			r18c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="kh" ">kh</button>'
-  			r18c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r18c3.innerHTML='<select class="mannersev"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r18c4.innerHTML='<select class="placea"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r18c2.innerHTML = '<select class="extnuna"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
+  			r18c3.innerHTML='<select class="manners"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r18c4.innerHTML='<select class="placev"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r19 = table.insertRow(19 );
   			var r19c1 = r19.insertCell(0);
@@ -1166,8 +1157,8 @@ slider.oninput = function () {
   			var r19c4 = r19.insertCell(3);
   			r19c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="y" ">y</button>'
   			r19c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r19c3.innerHTML='<select class="mannersv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r19c4.innerHTML='<select class="placecl"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r19c3.innerHTML='<select class="mannersev"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r19c4.innerHTML='<select class="placep"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r20 = table.insertRow(20 );
   			var r20c1 = r20.insertCell(0);
@@ -1176,8 +1167,8 @@ slider.oninput = function () {
   			var r20c4 = r20.insertCell(3);
   			r20c1.innerHTML = '<button type="button"   class="btn btn-outline-dark btn-sm m-1" id="aa2" ">aa</button>'
   			r20c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r20c3.innerHTML='<select class="mannersev"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r20c4.innerHTML='<select class="placel"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r20c3.innerHTML='<select class="mannerlv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r20c4.innerHTML='<select class="placecl"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r21 = table.insertRow(21 );
   			var r21c1 = r21.insertCell(0);
@@ -1186,8 +1177,8 @@ slider.oninput = function () {
   			var r21c4 = r21.insertCell(3);
   			r21c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="m2" ">m</button>'
   			r21c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r21c3.innerHTML='<select class="mannersv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r21c4.innerHTML='<select class="placecl"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r21c3.innerHTML='<select class="mannern"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r21c4.innerHTML='<select class="placel"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r22 = table.insertRow(22 );
   			var r22c1 = r22.insertCell(0);
@@ -1195,9 +1186,9 @@ slider.oninput = function () {
   			var r22c3 = r22.insertCell(2);
   			var r22c4 = r22.insertCell(3);
   			r22c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="sh" ">sh</button>'
-  			r22c2.innerHTML = '<select class="extnunun"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r22c3.innerHTML='<select class="manners"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r22c4.innerHTML='<select class="placev"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r22c2.innerHTML = '<select class="extnun"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
+  			r22c3.innerHTML='<select class="mannerf"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r22c4.innerHTML='<select class="placea"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r23 = table.insertRow(23 );
   			var r23c1 = r23.insertCell(0);
@@ -1205,9 +1196,9 @@ slider.oninput = function () {
   			var r23c3 = r23.insertCell(2);
   			var r23c4 = r23.insertCell(3);
   			r23c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="aa3" ">aa</button>'
-  			r23c2.innerHTML = '<select class="extnunun"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r23c3.innerHTML='<select class="manners"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r23c4.innerHTML='<select class="placed"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r23c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
+  			r23c3.innerHTML='<select class="mannerlv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r23c4.innerHTML='<select class="placecl"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r24 = table.insertRow(24 );
   			var r24c1 = r24.insertCell(0);
@@ -1216,8 +1207,8 @@ slider.oninput = function () {
   			var r24c4 = r24.insertCell(3);
   			r24c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="l3" ">l</button>'
   			r24c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r24c3.innerHTML='<select class="mannerlv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r24c4.innerHTML='<select class="placecl"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r24c3.innerHTML='<select class="mannersev"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r24c4.innerHTML='<select class="placed"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
 
   			var r25 = table.insertRow(25 );
   			var r25c1 = r25.insertCell(0);
@@ -1226,28 +1217,490 @@ slider.oninput = function () {
   			var r25c4 = r25.insertCell(3);
   			r25c1.innerHTML = '<button type="button"  class="btn btn-outline-dark btn-sm m-1" id="u3" ">u</button>'
   			r25c2.innerHTML = '<select class="extnv"><option value="" selected disabled hidden>select extn type</option><option value="none" >none</option><option value="voiced">voiced</option><option value="unvoiced">unvoiced</option><option value="unv-unasp-plo" >Unvoiced-Unasp-plosive</option><option value="unv-asp-plo" >Unvoiced-asp-plosive</option><option value="v-unasp-plo" >voiced-Unasp-plosive</option><option value="v-asp-plo" >voiced-asp-plosive</option></select>';
-  			r25c3.innerHTML='<select class="mannern"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
-  			r25c4.innerHTML='<select class="placed"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+  			r25c3.innerHTML='<select class="mannersv"><option value="" selected disabled hidden>select manner</option><option value="none" >none</option><option value="stop">stop</option><option value="nasal">nasal</option><option value="semi-vo" >semi-vowel</option><option value="short-vo" >short-vowel</option><option value="long-vo" >long-vowel</option><option value="dipth" >dipthong</option><option value="fri" >fricative</option></select>'
+  			r25c4.innerHTML='<select class="placebh"><option value="" selected disabled hidden>select place</option><option value="none" >none</option><option value="velar">velar</option><option value="platal">platal</option><option value="alveolar" >alveolar</option><option value="retroflex" >retroflex</option><option value="dental" >dental</option><option value="labial" >labial</option><option value="front-high" >front-high</option><option value="front-mid" >front-mid</option><option value="central-low" >central-low</option><option value="back-high" >back-high</option><option value="back-mid" >back-mid</option></select>'
+
+
+
+  			// adding region for each phenome
+			$( "#ii" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'one',start:0.109,end:0.340,color: randomColor(0.1)});
+			});
+			$( "#r1" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:0.341,end:0.390,color: randomColor(0.1)});
+			});
+
+			$( "#oo1" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:0.405,end:0.475,color: randomColor(0.1)});
+			});
+
+			$( "#j" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:0.476,end:0.540,color: randomColor(0.1)});
+			});
+
+			$( "#u1" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:0.541,end:0.708,color: randomColor(0.1)});
+			});
+
+			$( "#v" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:0.709 ,end:0.778,color: randomColor(0.1)});
+			});
+
+			$( "#aa1" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:0.778,end:0.880,color: randomColor(0.1)});
+			});
+
+			$( "#r2" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:0.880,end:0.980,color: randomColor(0.1)});
+			});
+
+			$( "#t" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:0.981,end:1.028,color: randomColor(0.1)});
+			});
+
+			$( "#a" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.028,end:1.075,color: randomColor(0.1)});
+			});
+
+			$( "#l1" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.075,end:1.103,color: randomColor(0.1)});
+			});
+
+			$( "#l2" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.103,end:1.143 ,color: randomColor(0.1)});
+			});
+
+
+			$( "#oo2" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.144,end:1.234 ,color: randomColor(0.1)});
+			});
+
+			$( "#n" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.235,end:1.264 ,color: randomColor(0.1)});
+			});
+
+			$( "#i" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.265,end:1.404 ,color: randomColor(0.1)});
+			});
+
+			$( "#m1" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.405,end:1.448 ,color: randomColor(0.1)});
+			});
+
+			$( "#u2" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.449,end:1.605 ,color: randomColor(0.1)});
+			});
+
+			$( "#kh" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.666,end:1.736 ,color: randomColor(0.1)});
+			});
+
+			$( "#y" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.737,end:1.180 ,color: randomColor(0.1)});
+			});
+
+			$( "#aa2" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.181,end:1.859 ,color: randomColor(0.1)});
+			});
+
+			$( "#m2" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.860,end:1.954   ,color: randomColor(0.1)});
+			});
+
+			$( "#sh" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:1.970,end:2.110 ,color: randomColor(0.1)});
+			});
+
+			$( "#aa3" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:2.111,end:2.227 ,color: randomColor(0.1)});
+			});
+
+			$( "#l3" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:2.230,end:2.310 ,color: randomColor(0.1)});
+			});
+
+			$( "#u3" ).click(function(){
+				wavesurfer.clearRegions();
+				wavesurfer.addRegion({id:'two',start:2.312,end:2.466 ,color: randomColor(0.1)});
+			});
+
+			//
+
+			$(".extnv").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="voiced"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".extnun").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="unvoiced"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".extnvun").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="v-unasp-plo"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".extnunun").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="unv-unasp-plo"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".extnuna").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="unv-asp-plo"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+
+			$(".mannersv").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="short-vo"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".mannersev").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="semi-vo"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".manners").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="stop"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".mannerlv").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="long-vo"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".mannern").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="nasal"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".mannerf").on('change', function() {
+				var s=this.value;
+					//alert(s);
+				if(s==="fri"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".placel").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="labial"){
+						$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".placefm").on('change', function() {
+				var s=this.value;
+			//alert(s);
+				if(s==="front-mid"){
+						$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".placefh").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="front-high"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".placebh").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="back-high"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".placebm").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="back-mid"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".placecl").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="central-low"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".placed").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="dental"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".placea").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="alveolar"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".placev").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="velar"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+			$(".placep").on('change', function() {
+				var s=this.value;
+				//alert(s);
+				if(s==="platal"){
+					$(this).removeClass("btn btn-danger");
+					$(this).addClass("btn btn-success");
+				}
+				else{
+					$(this).removeClass("btn btn-success");
+					$(this).addClass("btn btn-danger");
+					alert("Wrong.. Try again :(");
+
+				}
+			});
+
+				$( "#reset" ).click(function(){
+					wavesurfer.clearRegions();
+					$("select").removeClass("btn btn-danger");
+					$("select").removeClass("btn btn-success");
+					$("select").val("none");
+				});
+
 
 
 		}
 
+		if(sel==="none"){
 
-
-
-
-
-
-		if(sel==="Tamil"){
-			document.getElementById("utterance").innerHTML = " வணக்கம் இன்ரைய தலைப்பு செய்திகள்" ;
-			document.getElementById("translit").innerHTML ="vand~akkam inraiya talaippu cheydikal:" ;
-			document.getElementById("syll").innerHTML = "  va nd~a kkam in rai ya ta lai ppu chey di kal:" ;
-			document.getElementById("ph").innerHTML = "    v a nd~ a kk a m i n r ai y a t a l ai pp u ch ey d i k a l:"  ;
-			wavesurfer.load('tamil.mp3');
 			$("#final1").empty();
 			$("#final2").empty();
+			//$("#waveform").empty();
+			$("#utterance").empty();
+			$("#translit").empty();
+			$("#syll").empty();
+			$("#ph").empty();
+
+
+
+
+
 
 		}
+
+
+
+
+
+
+
+		
 
 
 	});
