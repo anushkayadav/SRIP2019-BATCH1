@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="../libraries/bootstrap/css/bootstrap.css">
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 	<title>Speech Production</title>
 	<style>
 		#table1 {
@@ -102,7 +104,7 @@
 			&nbsp;
 			&nbsp;
 			&nbsp;
-			<button type="button" class="btn btn-outline-warning  " id="reset" style="border-radius: 5px">Reset</button>
+			<button type="button" class="btn btn-outline-warning  " id="reset" style="border-radius: 5px" data-toggle="tooltip" data-placement="bottom" title="Reset the selections ">Reset</button>
 			&nbsp;
 			&nbsp;
 			&nbsp;
@@ -123,7 +125,7 @@
 
     					1.Select the Langauge from Language dropdown.<button type="button" class="btn btn-outline-info m-2">Choose Langauge</button><br><br>
 
-                              2.Click on the <button type="button" class="btn btn-outline-success m-2">Play</button> to play the complete audio .<br><br>
+                              2.Click on the <button type="button" class="btn btn-outline-success m-2">Play</button> to play the <strong>complete audio </strong>.<br><br>
 
                               3. Drag sections in waveform box to create "Regions".<br>
                               <img src="two.png"><br>
@@ -133,13 +135,16 @@
                               4.Click on each phoneme in <strong>Sym</strong> coloumn of the  table and observe its respective region in the waveform box.<br>
                               &nbsp;&nbsp;&nbsp;if the color of the region appears to be too light, click on the phenome again to change its color.<br><br>
 
+                              5.In order to play each phenome, click on its respective region  which appears after clicking it.<br>
+                              <img src="three.png"><br><br>
 
-                              5. Drag the slider to the right to <strong>ZOOM IN</strong>  and observe the region properly.<br><br>
 
-                              6. Select the respective <strong>Extn type</strong> , <strong>Manner</strong> and <strong>Place</strong> of each phoneme.
+                              6. Drag the slider to the right to <strong>ZOOM IN</strong>  and observe the region properly.<br><br>
+
+                              7. Select the respective <strong>Extn type</strong> , <strong>Manner</strong> and <strong>Place</strong> of each phoneme.
                               <br><br>
 
-                              7. The select box will turn into<strong> <span style="color:green"> Green </span></strong>if right selection is made and <strong><span style="color:red"> Red </span></strong>if wrong selection is made.<br>
+                              8. The select box will turn into<strong> <span style="color:green"> Green </span></strong>if right selection is made and <strong><span style="color:red"> Red </span></strong>if wrong selection is made.<br>
                               <img src="one.png">
                           </div>
 
@@ -176,15 +181,20 @@
 		
 	</table>
 
-	<button type="button" class="btn btn-outline-success m-3  " id="play" style="border-radius: 5px; text-align: center;">play</button>
+	<div style="text-align: center;">
+		<button type="button" class="btn btn-outline-success m-3 fas fa-play-circle playing  " data-toggle="tooltip" data-placement="bottom" title="play/pause complete audio" id="play" style="border-radius: 5px; text-align: center; font-size: 24px;"></button>
+		<button type="button" class="btn btn-outline-danger m-3" id="clearregion">Clear Regions</button>
+	</div>
 
 	<div id="waveform" class="m-2 sticky-top" ></div>
 	<div id="wave-timeline" class="m-2"></div>
 	
     <div class="col-xs-5" style="text-align: center;">
-      <input id="slider" type="range" min="500" max="2000" value="0" style="width: 75%" />
+    	<i class='fas fa-search-minus' data-toggle="tooltip" data-placement="bottom" title="zoom out"></i>
+      	<input id="slider" type="range" min="500" max="2000" value="0" style="width: 75%" />
+      	<i class='fas fa-search-plus' data-toggle="tooltip" data-placement="bottom" title="zoom in"></i>
     </div>
-    
+    <!--style="text-align: center;"-->
 
 
 

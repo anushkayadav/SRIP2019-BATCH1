@@ -98,6 +98,18 @@ slider.oninput = function () {
 		
 	});
 
+	wavesurfer.on('pause', function () {
+		$(".playing").removeClass("fas fa-pause-circle");
+					$(".playing").addClass("fas fa-play-circle");
+    
+});
+
+	wavesurfer.on('play', function () {
+		$(".playing").removeClass("fas fa-play-circle");
+					$(".playing").addClass("fas fa-pause-circle");
+    
+});
+
 	
 
 
@@ -930,6 +942,12 @@ slider.oninput = function () {
 					$("select").val("none");
 				});
 
+				$( "#clearregion" ).click(function(){
+					wavesurfer.clearRegions();
+					
+				});
+
+
 
 
 
@@ -1315,12 +1333,12 @@ slider.oninput = function () {
 
 			$( "#y" ).click(function(){
 				wavesurfer.clearRegions();
-				wavesurfer.addRegion({id:'two',start:1.737,end:1.180 ,color: randomColor(0.1)});
+				wavesurfer.addRegion({id:'two',start:1.737,end:1.780 ,color: randomColor(0.1)});
 			});
 
 			$( "#aa2" ).click(function(){
 				wavesurfer.clearRegions();
-				wavesurfer.addRegion({id:'two',start:1.181,end:1.859 ,color: randomColor(0.1)});
+				wavesurfer.addRegion({id:'two',start:1.781,end:1.859 ,color: randomColor(0.1)});
 			});
 
 			$( "#m2" ).click(function(){
@@ -1673,6 +1691,11 @@ slider.oninput = function () {
 					$("select").val("none");
 				});
 
+				$( "#clearregion" ).click(function(){
+					wavesurfer.clearRegions();
+					
+				});
+
 
 
 		}
@@ -1686,6 +1709,11 @@ slider.oninput = function () {
 			$("#translit").empty();
 			$("#syll").empty();
 			$("#ph").empty();
+
+			$( "#clearregion" ).click(function(){
+					wavesurfer.clearRegions();
+					
+				});
 
 
 
